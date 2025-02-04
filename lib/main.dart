@@ -34,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  static const maxExtent = 500.0;
+  static const maxExtent = 400.0;
   static const minExtent = 50.0;
 
   double extent = maxExtent;
@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    Timer.periodic(const Duration(milliseconds: 100), timerCallbackFunction);
+    // Timer.periodic(const Duration(milliseconds: 100), timerCallbackFunction);
 
     super.initState();
   }
@@ -72,10 +72,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(widget.title),
-        ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
